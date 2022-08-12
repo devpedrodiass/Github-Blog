@@ -22,17 +22,20 @@ width: 100%;
   header {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     h1 {
       font-weight: 700;
       font-size: 1.125rem;
       line-height: 160%;
       color: ${props => props.theme['base-title']};
+      text-align: justify;
     }
     
     span {
       font-size: 0.875rem;
       line-height: 160%;
       color: ${props => props.theme['base-span']};
+      
     }
   }
   

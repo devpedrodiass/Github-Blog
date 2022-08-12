@@ -12,6 +12,8 @@ import {
   PostDetailContainer,
   PostDetailContent,
 } from "./styles";
+import { formatDistanceToNow } from "date-fns";
+import { enUS } from "date-fns/locale";
 
 interface IPostDetail {
   title: string;
@@ -30,13 +32,15 @@ export function PostDetail() {
     const response = await api.get(
       `/repos/fariapv/Github-blog-issues/issues/${id}`
     );
-    console.log(response.data);
     const { title, comments, created_at, user, html_url, body } = response.data;
     const newPostObj = {
       title,
       githubUsername: user.login,
       comments,
-      createdAt: created_at,
+      createdAt: formatDistanceToNow(new Date(created_at), {
+        locale: enUS,
+        addSuffix: true,
+      }),
       url: html_url,
       body,
     };

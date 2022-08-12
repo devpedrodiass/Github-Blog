@@ -12,7 +12,7 @@ import {
 export interface IPost {
   title: string;
   body: string;
-  createdAt: string;
+  created_at: string;
   number: string;
 }
 
@@ -26,7 +26,6 @@ export function Home() {
         query ? query : ""
       }%20repo:${"fariapv"}/Github-blog-issues`
     );
-    console.log(response.data.items);
     setPosts(response.data.items);
     setPostsCounter(response.data.total_count);
   }
@@ -51,7 +50,13 @@ export function Home() {
           />
         </SearchSection>
         <ListSection>
-          {posts && posts.map((post) => <PostCard post={post}></PostCard>)}
+          {posts &&
+            posts.map((post) => (
+              <PostCard
+                key={`${post.title}-${post.number}`}
+                post={post}
+              ></PostCard>
+            ))}
         </ListSection>
       </HomeContent>
     </HomeContainer>

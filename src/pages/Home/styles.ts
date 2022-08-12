@@ -9,7 +9,7 @@ export const HomeContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 4.5rem;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 `;
 
 export const HomeContent = styled.div`

@@ -16,6 +16,9 @@ export const PersonInfoContainer = styled.div`
   div {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     header {
       display: flex;
       justify-content: space-between;
@@ -45,13 +48,13 @@ export const PersonInfoContainer = styled.div`
     main {
       p {
         margin-top: 0.5rem;
+        word-wrap: break-word;
       }
     }
     footer {
       display: flex;
       height: 100%;
-      align-items: center;
-      margin-top: auto;
+      align-items: flex-end;
       gap: 1.5rem;
       span {
         display: flex;
@@ -87,7 +90,7 @@ export const PersonInfoContainer = styled.div`
       footer {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center ;
       }
     }
   }

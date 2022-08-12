@@ -7,6 +7,7 @@ export const PostDetailContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 1rem;
 `;
 
 export const PostDetailCard = styled.div`
@@ -14,7 +15,7 @@ export const PostDetailCard = styled.div`
   width: 100%;
   height: auto;
   background: ${props => props.theme['base-profile']};
-  padding: 2rem;
+  padding:  2rem;
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   display: flex;
@@ -94,10 +95,28 @@ export const NavButton = styled(NavLink)`
     border-bottom: 2px solid ${props => props.theme.blue};
   }
 `
-
-
 export const PostDetailContent = styled.main`
   max-width: 864px;
   width: 100%;
   padding: 2.5rem;
+  white-space: pre-wrap;
+  overflow-x:auto;
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: ${props => props.theme['base-profile']};
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ${props => props.theme.blue};
+}
+
+
 `
