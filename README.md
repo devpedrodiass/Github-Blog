@@ -15,10 +15,6 @@ First you need to install and the dependencies and start the project
 npm run install
 npm run start
 ```
-Then you need to start the JSON Server, the local API
-```shell
-npm run server
-```
 
 ## ⚙ Config Section
 
