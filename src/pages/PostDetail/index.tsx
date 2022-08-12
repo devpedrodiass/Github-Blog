@@ -83,7 +83,9 @@ export function PostDetail() {
         </footer>
       </PostDetailCard>
       <PostDetailContent>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.body}</ReactMarkdown>
+        <div>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.body}</ReactMarkdown>
+        </div>
       </PostDetailContent>
     </PostDetailContainer>
   );

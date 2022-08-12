@@ -100,23 +100,28 @@ export const PostDetailContent = styled.main`
   width: 100%;
   padding: 2.5rem;
   white-space: pre-wrap;
-  overflow-x:auto;
+  overflow: hidden;
+  div {
+    overflow-x: auto;
+    width: 100%;
+    height: 100%;
+    /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: ${props => props.theme['base-profile']};
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: ${props => props.theme.blue};
+  }
+  }
 
-  /* width */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: ${props => props.theme['base-profile']};
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: ${props => props.theme.blue};
-}
 
 
 `
