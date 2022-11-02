@@ -30,7 +30,7 @@ export function PostDetail() {
 
   async function fetchPost() {
     const response = await api.get(
-      `/repos/fariapv/Github-blog-issues/issues/${id}`
+      `/repos/pedr0d1as/Github-blog-issues/issues/${id}`
     );
     const { title, comments, created_at, user, html_url, body } = response.data;
     const newPostObj = {
