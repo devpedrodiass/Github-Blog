@@ -18,7 +18,7 @@ export function PersonInfo() {
   const [userInfo, setUserInfo] = useState<IUserInfo>();
 
   async function fetchUsers() {
-    const response = await api.get("users/pedr0d1as");
+    const response = await api.get("users/devpedrodiass");
     const { name, followers, login, company, html_url, avatar_url, bio } =
       response.data;
     const newUserObj = {
